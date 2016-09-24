@@ -7,7 +7,7 @@ var options = {
 };
 
 var pgp = require('pg-promise')(options);
-var connectionString = 'postgres://localhost:5432/feed_db';
+var connectionString = process.env.DATABASE_URL;
 var db = pgp(connectionString);
 
 // add query functions
